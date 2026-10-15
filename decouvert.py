@@ -65,5 +65,43 @@ print("Nom\t/Moyenne\tNombre de notes")
 
 #guillemets : \" ou \'
 print("Il a dit : \"Bonjour\"")
+print("Il a dit : 'Bonjour'")
+
+#backslash : \\
+print("Dossier : C:\\Users\\Mélodie")
 
 
+#conditons et logique booléennes
+#== opérateur égalité
+print("5 ==5:", 5 == 5)#true
+print("5 == 6:", 5 == 6)#false
+print("melodie == melodie:", "melodie"=="melodie")#true
+print("melodie == Mélodie:", "melodie"=="Mélodie")#false => sensible a la casse
+
+#comparaison chainées
+note = 15
+print("10<= note <= 20:", 10 <= note <= 20)#true
+
+#differencier = et ==
+note_parfaite = note == 20
+print("note_parfaite", note_parfaite)#false
+
+#condition and, or , not
+moyenne= 11.5
+nombre_abscences = 4
+a_rendu_son_projet = True
+
+#and : vrai seulement si les deux conditions sont vraies
+admis_sans_reserves = moyenne >= 10 and nombre_abscences <= 3
+print("admis_sans_reserves:", admis_sans_reserves)#false
+
+#or : vrai si au moins une des deux conditions est vraie
+envoi_alerte = moyenne < 8 or nombre_abscences > 3
+print("envoi_alerte:", envoi_alerte)#true
+
+#not : inverse la valeur de la condition
+print("Projet manquant:", not a_rendu_son_projet)#false
+
+#parenthèses rendent les combinaisons plus lisibles
+peut_passer_jury = (moyenne >= 10 or a_rendu_son_projet)and not nombre_abscences > 10
+print("peut_passer_jury:", peut_passer_jury)

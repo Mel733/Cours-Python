@@ -26,3 +26,17 @@ print("Type du 'nombre de notes' :", type(nombre_de_notes))
 print("Type de la 'somme_des_notes' :", type(somme_des_notes))
 print("Type de la 'moyenne' :", type(moyenne))
 print("Type de 'est_admis' :", type(est_admis))
+
+print("======Carnet de notes :========")
+nom_etudiant =input("Quel est ton nom ?")
+note1 = float(input("Note 1 (Sur 20) : ").replace(",", "."))
+note2 = float(input("Note 1 (Sur 20) : ").replace(",", "."))
+note3 = float(input("Note 1 (Sur 20) : ").replace(",", "."))
+
+nombre_de_notes = 3
+moyenne =(note1+note2+note3)/nombre_de_notes
+
+print(f"Etudiant : {nom_etudiant}")
+print(f"Notes : {note1:.2f},{note2:.2f}, {note3:.2f}")
+print(f"Moyenne : {moyenne:.2f}")
+
