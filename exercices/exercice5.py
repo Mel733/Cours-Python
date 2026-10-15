@@ -25,16 +25,3 @@ print (f"{"Prix unitaire":<18}: {prix_produit_unitaire:<2.2f} ")
 print(f"A PAYER   {total:<2.2f} €")
 print("=" * 26)
 print("Merci de votre visite !\n\tA bientôt.")
-
-
-
-
-
-
-
-
-
-
-
-
-print (f"Produit : {nom_produit}")
