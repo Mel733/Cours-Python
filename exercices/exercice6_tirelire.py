@@ -45,9 +45,9 @@ print()
    
 
 
-   #Partie 3:
-total = 0
-semaine = 0
+#Alternative a la partie 3
+# total = 0
+# semaine = 0
 
 #while total < 200:
   #semaine += 1
@@ -56,7 +56,7 @@ semaine = 0
     #depot += 5
     #total += depot
 #print(f"Il faut {semaine} semaines pour atteindre {total} euro et achter le vélo")
-#Alternative a la partie 3
+
 
 
     #Partie 4:
@@ -64,7 +64,7 @@ solde = 0
 choix =""
 while choix !="3":
       print(f"-----Tirelire de Mélodie (solde : {solde})")
-      print ("1.Déposer\n 2.Retirer \n 3. Quitter")
+      print ("1.Déposer\n2.Retirer \n3. Quitter")
       choix = input("Votre choix: ")
 
       if choix == "1":

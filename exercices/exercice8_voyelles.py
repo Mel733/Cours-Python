@@ -6,7 +6,7 @@ def compteur_voyelle (texte):
     for caracter in texte.lower():
         if caracter in voyelle:
             nb_voyelle += 1
-            return nb_voyelle
+    return nb_voyelle
 
 
 def demander_choix():
@@ -20,7 +20,7 @@ def demander_choix():
    
         choix=input("Quelle est votre choix ?")
 
-        if choix == "1" or choix == 2:
+        if choix == "1" or choix == "2":
             return choix
         else:
             print("erreur : choix invalide")
@@ -30,9 +30,9 @@ def demander_choix():
 
 def lancer_programme():
     while True:
-        choix = demander_choix
+        choix = demander_choix()
 
-        if choix == 1 :
+        if choix == "1" :
             phrase =input("Quelle est votre phrase ?")
 
             if phrase.strip()=="":
@@ -40,7 +40,7 @@ def lancer_programme():
 
             else :
                 nombre_voyelle = compteur_voyelle(phrase)
-                print(f"La phrase contient '{nombre_voyelle} voyelles")
+                print(f"La phrase contient : {nombre_voyelle} voyelles")
 
         elif choix == "2":
             print("Au revoir")
