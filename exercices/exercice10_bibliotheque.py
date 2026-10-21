@@ -7,38 +7,51 @@ def menu_choix():
 
       try :
    
-        choix=input("Que voulez vous faire ?")
+        choix=int(input("Que voulez vous faire ?"))
 
-        if choix == "1" or choix == "2" or choix =="3":
+        if choix == 1 or choix == 2 or choix ==3:
             return choix
         else:
             print("erreur : choix invalide")
 
       except ValueError:
-          print("Merci de choisir 1 ou 2")
+          print("Merci de choisir 1 ou 2 ou 3")
 
 
-def affichage_un_livre(liste_livre):
-   for livre in liste_livre.low().strip:
-      if livre in liste_livre:
-         print(f"TROUVER: {livre}")
-      else :
-         print(f"Non trouvé : {livre}")
+def affichage_un_livre():
+   saisie = input("Quel livre recherchez vous ? ")
+   saisie = saisie.lower().strip()
+   print()
+
+   trouve = False
+   for livre in liste_livre:
+        if livre.strip().lower()== saisie:
+         trouve = True
+         break
+
+   if trouve :
+      print(f"TROUVER: {saisie}")
+   else :
+      print(f"Non trouvé : {saisie}")
 
 def affichage_liste():
-  return(liste_livre)
-
+  for livre in liste_livre:
+     print()
+     print(livre)
+     print()
 
 def programme():
    while True:
      choix = menu_choix()
 
-     if choix =="1":
-      print("Quel livre recherchez vous ? ")
+     if choix ==1:
+      
       affichage_un_livre()
-     elif choix =="2":
-        affichage_liste(liste_livre)
-     elif choix == "3":
+     elif choix ==2:
+        print()
+        affichage_liste()
+        print()
+     elif choix == 3:
         print("Au revoir") 
         break
 
