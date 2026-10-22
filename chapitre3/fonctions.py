@@ -1,6 +1,8 @@
 #les fonctions 
 #def : introduit la definition
-#paramètres : valeur que la fonction peut recevoir pour affectuer son traitement
+#paramètres : valeur que la fonction peut recevoir pour effectuer son traitement
+
+
 #return : permet de renvoyer une valeur depuis la fonction, tout ce qui est apres ne passe pas
 
 def calculer_age (annee):

@@ -1,4 +1,5 @@
 participants =["Mélodie", "Sélomey", "Melvin", "Thomas", "Mark", "Tim", "Alicia"]#liste participants
+
 def menu(): #fonction pour menu
     while True : #lance a le menu a l'infinie jusqu'a que la saisie soient valide
         print("=====LISTE PARTICIPANTS=====")
@@ -32,7 +33,7 @@ def ajouter_participant(): #fonction ajouter participant
   
     
 def afficher_participants():#fonction affichant la liste
-   if participants =="": #si la liste est vide un message apparait
+   if not participants: #si la liste est vide un message apparait
       print("Liste Vide, veuillez ajouter au moins un participant")
    else:
     for participant in range(0, len(participants)):#sinon une boucle for va afficher les participant de O(premier participant) a la longuer de la liste.
@@ -42,17 +43,16 @@ def afficher_participants():#fonction affichant la liste
 
 def rechercher_participant(): #fonction rechercher participant
    recherche = input("Qui voulez vous rechercher ? ")
-   recherche_nettoyer = recherche.lower().strip().title()#recherche nettoyer pour pouvoir comparer avec la liste
+   recherche_nettoyer = recherche.lower().strip()#recherche nettoyer pour pouvoir comparer avec la liste
 
-   trouve = False # on part du principe qu'on n'a rien trouvé
-   for participant in participants: #on regarde chque participant un à un
-      if participant == recherche_nettoyer: # si la recherche_nettoyé est identique a un participant
-         trouve = True #true car on la trouvé
-         break #on sort de la boucle
-
-   if trouve : #apres la boucle on regarde le résultat et on l'affiche
-      print("Trouvé")
-   else :
+   trouve = False #reste false tant que rien n'a été touvé
+   for participant in participants: #on parcourt chaque partcicpant dans la liste de participants
+             if recherche_nettoyer in participant.lower(): #on verifie si le contenue tape correstpont a un partcicpant(tout est mis en minuscule ppur comparer)
+                print(f"Trouvé: {participant}") #affiche le titre complet selon la recherche(affiche le participant tel quel dans la liste)
+                trouve = True#on note que on a trouvé un résultat
+   
+             #s'execute seulement apres avoir parcourue toute la liste
+   if not trouve:
       print("Pas trouvé")
 
 def supprimer_participant(): #fonction supprimer un participant
