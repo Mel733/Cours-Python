@@ -1,43 +1,49 @@
-#dictionnaires : collection non ordonné de paires clé-valeurs
-#prenom, promo , age sont des exemples de clé
-#Selomey, B1DEV et 17 sont des exemples de valeurs
+# DICTIONNAIRES : collection de paires clé -> valeur
+# Clés : "prenom", "promo", "age"  |  Valeurs : "Sélomey", "B1DEV", 17
 
 etudiant = {
     "prenom": "Sélomey",
-    "promo" : "B1DEV",
-    "age" : 17
+    "promo": "B1DEV",
+    "age": 17
 }
-print(etudiant)
+print(etudiant) # {'prenom': 'Sélomey', 'promo': 'B1DEV', 'age': 17}
 
-print(etudiant["prenom"])
-print(etudiant["age"])
-print(etudiant["promo"])
-print(f"Dans la promo des {etudiant["promo"]} il y a {etudiant["prenom"]} et elle a {etudiant["age"]} ans")
+# --- Lire une valeur : dictionnaire[clé] ---
+print(etudiant["prenom"])   # Sélomey
+print(etudiant["age"])      # 17
+print(etudiant["promo"])    # B1DEV
+print(f"Dans la promo des {etudiant['promo']} il y a {etudiant['prenom']} et elle a {etudiant['age']} ans")
 
-#tester la présence d'une clé:
+# --- Tester si une clé existe (renvoie True ou False) ---
+print("prenom" in etudiant)   # True
+print("nom" in etudiant)      # False
 
-print("prenom" in etudiant) #true
-print("nom" in etudiant) #false
+# --- get() : lire sans risque d'erreur ---
+# etudiant["nom"] -> KeyError si la clé n'existe pas
+# get() renvoie None, ou une valeur par défaut qu'on choisit
+print(etudiant.get("prenom"))          # Sélomey
+print(etudiant.get("nom", "Inconnu"))  # Inconnu (la clé "nom" n'existe pas)
 
-#get : permet de récuperer la valeur aassocier a une clé, avec une valeur par défaut si la clé n'existe pas
-print(etudiant.get("prenom")) #affiche "Sélomey"
-print(etudiant.get("nom", "Inconnu")) # affiche "Inconnu" car la clé nom n'existe pas 
+# --- Ajouter une paire (clé qui n'existe pas encore) ---
+etudiant["nom"] = "Dupont"
+print(f"{etudiant['prenom']} {etudiant['nom']}")   # Sélomey Dupont
 
-#ajouter une nouvelle paire clé-valeur
-etudiant ["nom"] = "Dupont"
-print(f"{etudiant['prenom']} {etudiant['nom']}")
-
-#modification d'une valeur d'une paire clé-valeur
+# --- Modifier une valeur (clé qui existe déjà) ---
 etudiant["age"] = 18
-print(f"Apres modif, l'age est de : {etudiant["age"]}")
+print(f"Après modif, l'âge est de : {etudiant['age']}")  # 18
 
-#supression :
+# --- Supprimer une paire ---
 del etudiant["age"]
-print(f"A pres supression, l'édutiant est : {etudiant}")
+print(f"Après suppression, l'étudiant est : {etudiant}")
+# {'prenom': 'Sélomey', 'promo': 'B1DEV', 'nom': 'Dupont'}
 
-#ajout d'une valeur dans la clé nom
-etudiant ["nom"] = ["Dupont", "Martin"]
+# --- Une valeur peut être une liste ---
+etudiant["nom"] = ["Dupont", "Martin"]
+print(etudiant["nom"][1])   # Martin (clé "nom", puis index 1 de la liste)
 
-etudiant["prenom"] = {"prenom1": "Sélomey", "prenom2": "Timothé"} #céer deux clé dans la clé prenom
+# --- Une valeur peut être un autre dictionnaire (imbriqué) ---
+etudiant["prenom"] = {"prenom1": "Sélomey", "prenom2": "Timothé"}
 
-print(f"{etudiant["prenom"]["prenom1"]}, {etudiant["prenom"]["prenom2"]}") #aller d'abord dans la clé principale, ensuite la clé enfant pour afficher la valeur correspondant
+# On descend niveau par niveau : d'abord la clé principale, puis la clé enfant
+print(f"{etudiant['prenom']['prenom1']}, {etudiant['prenom']['prenom2']}")
+# Sélomey, Timothé
