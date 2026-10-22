@@ -5,7 +5,7 @@ def menu(): #fonction pour menu
         print("=====LISTE PARTICIPANTS=====")
         print("1.Ajouter un participant\n2.Afficher les participant\n3.Rechercher un participant\n4.Supprimer un participant\n5.Quitter")
         try : #essaye et execute le valueError en cas d'erreur de saisie
-            choix =int(input("Que voulez vous faire ?"))
+            choix =int(input("Que voulez vous faire ? "))
 
             if  1<= choix <= 5 : #si le choix est supérieur ou égale a 1 ou inférieur ou égale a 5
              return choix #renvoie la valeur de choix

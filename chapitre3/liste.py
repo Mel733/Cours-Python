@@ -22,7 +22,8 @@ nouvelExemple = [
 print(f"{nouvelExemple[0][0]} a {nouvelExemple[0][1]} ans et il aime l'{nouvelExemple[0][3][1][0]}et sa couleur est le {nouvelExemple[0][3][2]}" )
 print(f"{nouvelExemple[1][0]} a {nouvelExemple[1][1]} ans et elle aime les couleurs : {nouvelExemple[1][3][1][0]}, {nouvelExemple[1][3][1][1]}, {nouvelExemple[1][3][2]}")
 
-#les methodes de liste
+#les methodes de liste:
+
 #ajouter/ insère, retire, remplce des éléments
 notes = [12.0, 15.5, 18.25]
 print("Depart : ", notes)
@@ -63,3 +64,5 @@ print(len(prenoms))#nombre de valeurs dans une liste
 for index in range(0, len(prenoms)):
  print({index})# 0 1 2 3 4 5
  print(f"{prenom[index]}")#affiche les prénoms correspondant auw index 0 1 2 3 4 5
+
+

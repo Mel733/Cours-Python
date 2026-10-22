@@ -38,14 +38,14 @@ def afficher_playlist():
 
 
 def rechercher_musique():
-    saisie_recherche=input("Quelle musique voulez voux recherchez ?")
+    saisie_recherche=input("Quelle musique voulez voux recherchez ? ")
     saisie_propre = saisie_recherche.strip().lower()
 
     trouve = False #reste false tant que rien n'a été touvé
     for musique in musiques: #on parcourt chaque musique dans la playlist
-          if saisie_propre in musique.lower(): #on verifie si le contenue tape correstpont a un titre(tout est mis en minuscule ppur comparer)
-             print(f"Trouvé: {musique}") #affiche le titre complet selon la recherche(affiche le titre tel quel dans la liste)
-             trouve = True#on note que on a trouvé un résultat
+        if saisie_propre in musique.lower(): #on verifie si le contenue tape correstpont a un titre(tout est mis en minuscule ppur comparer)
+            print(f"Trouvé: {musique}") #affiche le titre complet selon la recherche(affiche le titre tel quel dans la liste)
+            trouve = True #on note que on a trouvé un résultat
 
           #s'execute seulement apres avoir parcourue toute la liste
     if not trouve:

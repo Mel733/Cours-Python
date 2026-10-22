@@ -1,4 +1,4 @@
-#libéller : 
+#libéller : indique a l'utilisateur ce qu'ils doit saisir dans le input
 
 #saisi avec input()
 age_saisi =input("Quel age as tu ? ")

@@ -1,4 +1,4 @@
-    #while : execute tant que la condition est vrai
+ #while : execute tant que la condition est vrai
        
 #compteur simple
 compteur = 1

@@ -1,8 +1,10 @@
 #if/elif/else
+#structure conditionnel
 #indentation = 4 espaces(recomammdation PEP 8 => style officiel python)
 #if = si
 #else = autre
 #elif = sinon si
+# if .... = predicat apres le if : Ce que la condition va verifier
 note = float(input("Quelle est ta note ?").replace(",","."))
 if note >= 10 :
     print("Bravo vous avez la moyenne")

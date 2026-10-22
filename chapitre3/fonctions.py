@@ -1,12 +1,22 @@
 #les fonctions 
 #def : introduit la definition
-#paramètres : valeur que la fonction peut recevoir pour effectuer son traitement
-
+# Paramètres : variables déclarées entre parenthèses dans la définition de la fonction. 
+# Elles reçoivent les valeurs (arguments) passées lors de l'appel et permettent à la fonction d'effectuer son traitement.
+#Fonctions : blocs de code réutilisables, définis avec le mot-clé def.
+# Une fonction porte un nom, peut recevoir des paramètres, effectue un
+# traitement, puis peut renvoyer un résultat avec return.
+# On l'écrit une fois et on l'appelle autant de fois que nécessaire.
+# c'est une économie de code avec des instructions sous forme de bloc de code reutilisable
 
 #return : permet de renvoyer une valeur depuis la fonction, tout ce qui est apres ne passe pas
 
-def calculer_age (annee):
+# Paramètres :
+#   annee : année de naissance de la personne (ex. : 1990)
+def calculer_age(annee):
+    # Soustrait l'année de naissance à l'année actuelle (2026)
     return 2026 - annee
+
+calculer_age(2008)
 
 age = calculer_age (1987)
 print(f"Vous avez {age} ans")
