@@ -1,4 +1,6 @@
- #while : execute tant que la condition est vrai
+#Itération: c’est un tour de boucle. Répéter une action plusieurs fois, c’est itérer. 
+#Continue : sauter la suite du tour de boucle et de passer directement à l’itération suivante.
+#while : execute tant que la condition est vrai
        
 #compteur simple
 compteur = 1
@@ -36,6 +38,7 @@ print("-"*40)
  #somme += compteur
 #print("Somme :", somme)
 
+
 #boucles for et range
    #for : répete son bloc pour chaque élément d'une séquence
    #range () : génère une séquence de nombre, ex: range(5) -> 0, 1, 2, 3, 4
@@ -43,7 +46,7 @@ print("-"*40)
    #range(début, fin) : range (3, 9) -> 3,4,5,6,7,8
    #range (Début, fin, pas): range ( 2, 10, 2) -> 2,4,6,8
 
-for i in range (5):
+for i in range (5): #répète ce qui suit nombre fois, le i agit comme un compteur de tour, par défaut a 0 jusqua le nombre entre parenthèse
     print ("Tour numéro :", i, end =" ")
 print("-"*40)
 

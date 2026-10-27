@@ -4,6 +4,8 @@ print("7-2 =", 7 - 2)#soustraction
 print("7*2 =", 7 * 2)#multiplication
 print("7/2 =", 7 / 2)#division
 
+#// : division entière
+
 print("7%2 =", 7 % 2)#modulo (affiche le reste d'une division)
 
 #priorité des opérateurs

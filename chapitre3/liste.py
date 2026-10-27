@@ -153,4 +153,5 @@ for index in range(0, len(prenoms)):
  print({index})# 0 1 2 3 4 5
  print(f"{prenom[index]}")#affiche les prénoms correspondant aux index 0 1 2 3 4 5
 
-
+# .join(liste) colle les éléments de la liste en une seule chaîne,
+# avec " " (un espace) entre chaque élément.
