@@ -13,7 +13,7 @@ class Parapluie: # Créer la classe Parapluie. Une classe est un modèle : chaqu
 
 
 
-class AtelierParapluies(): # Créer la classe AtelierParapluie. Une classe est un modèle : chaque atelier sera un objet créé à partir d'elle
+class AtelierParapluies: # Créer la classe AtelierParapluie. Une classe est un modèle : chaque atelier sera un objet créé à partir d'elle
     def __init__(self, nom): #C'est le constructeurs : c'est une méthode pour la création d'un objet avec les atrributs
         self.nom = nom
         self.liste_parapluies = [] #attribut de l'atelier sous forme de liste pour l'instant vide, elle est comme l'étagère ou se retouve les parapluies
