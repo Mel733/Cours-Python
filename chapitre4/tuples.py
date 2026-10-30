@@ -33,3 +33,12 @@ etudiant = ("Melvin", "Tom", "Tim")
 print(etudiant[0])         # Melvin (lecture possible)
 # etudiant[1] = "Mélodie"  # TypeError : un tuple ne se modifie pas
 
+#Exemple d'un exercice :
+# On trie la liste :
+#key est le paramètre du sort qui trie
+#lambda est le critère de key qui sert à écrire une fonction en une ligne sans def
+#    - d'abord par score décroissant (le "-" inverse l'ordre)
+#    - en cas d'égalité, par pseudo en ordre alphabétique
+# "Alice"  → le pseudo (position 0)
+# 82       → le score (position 1)
+#joueurs.sort(key=lambda j: (-j[1], j[0]))
