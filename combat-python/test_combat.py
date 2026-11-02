@@ -30,14 +30,14 @@ def test_regles():
 
 
     message = gandalf.attaquer(roimort, 0, tirage_aleatoire=0.99)
-    assert "attaque invalide" in message, "Gandalf ne devrait pas pouvoir attaquer un perso mort"
+    assert "déjà mort" in message, "Gandalf ne devrait pas pouvoir attaquer un perso mort"
     
 
     autre_gandalf = Gandalf()
     gandalf.subir_degats(gandalf.points_de_vie + 10)
     
     message =autre_gandalf.attaquer(gandalf, 0, tirage_aleatoire=0.99)
-    assert "attaque invalide" in message, "L'autre Gandalf ne devrait pas pouvoir attaquer un perso mort"
+    assert "déjà mort" in message, "L'autre Gandalf ne devrait pas pouvoir attaquer un perso mort"
         
 
 

@@ -4,12 +4,28 @@
 # Classe   : un plan (modèle) qui décrit des attributs (infos) et des méthodes(ou appéler fonctions) (actions)
 # Objet    : une "copie" créée à partir de la classe (on dit une instance)
 # Instanciation : le fait de créer un objet à partir d'une classe
-#Encapsulation : protéger le système interne
+# Encapsulation : protéger les données internes d'une classe en limitant 
+# l'accès direct, et passer par des méthodes (getters/setters) pour les modifier.
 
-#Public : nompropre : accessible et peut etre envoyé aux objets
-#Protected : _nompropre : accessible dans la class, peut etre envoyer au objets mais non visible
-#Private: __nompropre : ne peux pas etre envoyé aux objets de la classe
-#Entité: acteurs qui deviennes des tables dans une BDD
+# ===== VISIBILITÉ DES ATTRIBUTS EN PYTHON =====
+
+# PUBLIC : nom
+#   Accessible partout : dans la classe, les sous-classes et depuis l'extérieur.
+
+# PROTECTED : _nom
+#   Simple convention : "usage interne à la classe et à ses sous-classes".
+#   Il ne faut pas l'utiliser depuis l'extérieur, mais Python ne l'empêche pas
+#   (obj._nom fonctionne), donc ce n'est pas réellement caché.
+
+# PRIVATE : __nom
+#   Name mangling : renommé en _Classe__nom.
+#   obj.__nom -> AttributeError depuis l'extérieur de la classe.
+#   Contournable via obj._Classe__nom, mais évite les collisions
+#   de noms avec les sous-classes.
+
+# ENTITÉ
+#   Classe métier (Client, Produit, Commande...) persistée en base de données.
+#   Avec un ORM : classe -> table, attribut -> colonne, objet -> ligne.
 # ---------------------------------------------------------------------
 # EXEMPLE 1 : la classe Personne
 # ---------------------------------------------------------------------

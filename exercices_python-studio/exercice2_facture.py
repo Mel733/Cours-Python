@@ -1,19 +1,19 @@
-def ligne_facture(article, prix, quantite=1): #créer la fonction ligne facture avec comme parametre article, prix et quantiité qui est =1 car optionnel
-    total = prix*quantite #on calcule le total d'un article
-    print(f"{article} x{quantite} : {total:.2f} €") #on affiche un message avec total
-    return total #on retoure la valeur du total pour plus tard l'additionner
+def ligne_facture(article, prix, quantite=1):    #crée la fonction ligne_facture avec les paramètres article, prix et quantite (valeur par défaut = 1, donc optionnel)
+    total = prix*quantite    #on calcule le total d'un article
+    print(f"{article} x{quantite} : {total:.2f} €")   #on affiche une ligne avec le total (2 décimales)
+    return total #on retourne le total pour l'additionner plus tard
 
 
-nombre = int(input()) #demande combien de ligne de facture
-total_facture = 0 #initialiser a 0
-for _ in range(nombre): #pour le nombre de ligne de factures demander on vas :
-    morceaux = input().split() #couper la valeur donner pour morceaux séparement pour donner [article, prix, quantité]
-    article = morceaux[0] #on précise que article prend la position 0 dans la liste
-    prix = float(morceaux[1]) #on convertie prix en float et on précise qu'il a la position 1
-    if len(morceaux) == 2 : #si la longeur de morceaux est de 2
-      total_facture += ligne_facture(article, prix) #on execute la fonction avec seulement article et rix comme valeur puis on incrémente le total dans le total de la facture
-    else : #autre 
-        quantite = int(morceaux[2]) #on convertie en int quantite et on précise qu'il a la postion 2
-        total_facture += ligne_facture(article, prix, quantite) #on fait la meme chose suaf que on rajoute la quantité
+nombre = int(input())   #demande combien de lignes de facture (conversion str -> int)
+total_facture = 0 #initialisé à 0
+for _ in range(nombre):   #pour chaque ligne de facture demandée (_ = variable jetable) :
+    morceaux = input().split()   #split() découpe la saisie aux espaces et donne une liste [article, prix, quantité]
+    article = morceaux[0]   #article = élément à l'index 0 de la liste
+    prix = float(morceaux[1])   #prix = élément à l'index 1, converti en float
+    if len(morceaux) == 2 :   #si la liste contient 2 éléments (pas de quantité saisie)
+      total_facture += ligne_facture(article, prix)   #on appelle la fonction sans quantité (valeur par défaut 1) et on ajoute le total à total_facture
+    else :   #sinon (la quantité est présente)
+        quantite = int(morceaux[2])   #quantite = élément à l'index 2, converti en int
+        total_facture += ligne_facture(article, prix, quantite)   #même chose, mais avec la quantité
 
-print(f"Total : {total_facture:.2f} €") #on affiche le total
+print(f"Total : {total_facture:.2f} €")   #on affiche le total de la facture (2 décimales)
