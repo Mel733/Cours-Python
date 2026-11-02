@@ -1,11 +1,11 @@
-import random
-class Personnage :
+import random #importe le module random
+class Personnage : #créer la classe Personnage
     #constructeur de la classe Personnage
-    def __init__(self, nom, pv, attaques = None):
-        if nom is None or nom.strip()=="":
-            raise ValueError("Le nom du personnage ne peut pas être vide")
-        if pv <= 0:
-            raise ValueError("Les points de vie doivent etre supérieur a 0")
+    def __init__(self, nom, pv, attaques = None): #le init s'execute lors de la création d'un objet de la classe avec les attributs
+        if nom is None or nom.strip()=="": #si le nom est vide
+            raise ValueError("Le nom du personnage ne peut pas être vide") #leve intentionnellement une erreur
+        if pv <= 0: #si les pv sont inférieur ou égale a 0
+            raise ValueError("Les points de vie doivent etre supérieur a 0") #on fait de meme
         self.nom = nom
         self._points_de_vie = pv
         self._points_de_vie_max = pv
