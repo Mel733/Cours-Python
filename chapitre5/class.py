@@ -4,7 +4,12 @@
 # Classe   : un plan (modèle) qui décrit des attributs (infos) et des méthodes(ou appéler fonctions) (actions)
 # Objet    : une "copie" créée à partir de la classe (on dit une instance)
 # Instanciation : le fait de créer un objet à partir d'une classe
+#Encapsulation : protéger le système interne
 
+#Public : nompropre : accessible et peut etre envoyé aux objets
+#Protected : _nompropre : accessible dans la class, peut etre envoyer au objets mais non visible
+#Private: __nompropre : ne peux pas etre envoyé aux objets de la classe
+#Entité: acteurs qui deviennes des tables dans une BDD
 # ---------------------------------------------------------------------
 # EXEMPLE 1 : la classe Personne
 # ---------------------------------------------------------------------
