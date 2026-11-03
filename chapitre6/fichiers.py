@@ -1,3 +1,4 @@
+
 # Ouvrir et lire un fichier :
 with open("texte.txt", "r", encoding="utf-8") as f:
     # "r" = lecture (mode par défaut), encoding="utf-8" évite les problèmes d'accents.

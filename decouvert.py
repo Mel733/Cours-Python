@@ -14,3 +14,8 @@
 
 # YAGNI = You Aren't Gonna Need It : ne pas coder ce dont on n'a pas besoin
 #       maintenant. Rejoint KISS (rester simple).
+
+
+
+
+
