@@ -8,7 +8,7 @@ while True: #boucle infinie jusqu'a break
       reste_minutes = temps_minutes %60 #et le reste des minutes
       
       print(f"{temps_minutes} min vaut {temps_heures}h et {reste_minutes} min") #on affiche le resultat
-      break #fin programme
+      exit() #fin programme ou break
   except ValueError: #affiche message si input est une chaine par exemple
     print("Erreur sur la valeur")
 
