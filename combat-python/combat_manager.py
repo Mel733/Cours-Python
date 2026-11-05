@@ -49,11 +49,11 @@ class CombatManager:     #on crée la classe CombatManager
                   print(self.roimort.attaquer(self.gandalf, choix_roi))   #on affiche le message renvoyé : le roi mort attaque gandalf avec l'attaque d'index choix_roi
                   self.afficher_etat()   #on affiche l'état de chaque personnage à la fin du tour
                   self.tour +=1   #on incrémente de 1 le numéro du tour
-
+        print()
         print("=====FIN DU COMBAT=====")   #fin du combat
         self.afficher_etat()   #affiche l'état des personnages
         vainqueur = self.gandalf if self.gandalf.est_vivant() else self.roimort   #expression conditionnelle : gandalf s'il est vivant, sinon le roi mort
-        print (f"Le grand vainqueur est : {vainqueur.nom} avec {vainqueur.points_de_vie} PV et {vainqueur.xp} XP ")   #affiche le vainqueur avec ses attributs (nom, PV, XP)
+        print (f"Le grand vainqueur est : {vainqueur.nom} avec {vainqueur.points_de_vie:.2f} PV et {vainqueur.xp} XP ")   #affiche le vainqueur avec ses attributs (nom, PV, XP)
                   
                   
         

@@ -27,5 +27,33 @@ while True: #bouble infinie jusqu'a le user choisise n
 
 
 
+# import random
+# import string
 
+
+# def generer_mot_de_passe(longueur):
+#     if longueur < 4:
+#         print("La longueur doit être d'au moins 4 caractères.")
+#         return None
+
+#     mot_de_passe = [ 
+#         random.choice(string.ascii_lowercase),
+#         random.choice(string.ascii_uppercase),
+#         random.choice(string.digits),
+#         random.choice("!@#$%&*"),
+#     ]
+
+#     tous_caracteres = string.ascii_letters + string.digits + "!@#$%&*"
+#     for _ in range(longueur - 4):
+#         mot_de_passe.append(random.choice(tous_caracteres))
+
+#     random.shuffle(mot_de_passe)
+
+#     return "".join(mot_de_passe)
+
+
+# longueur = int(input("Longueur du mot de passe souhaitée : "))
+# resultat = generer_mot_de_passe(longueur)
+# if resultat:
+#     print(f"Mot de passe généré : {resultat}")
 
